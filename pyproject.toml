@@ -10,11 +10,13 @@ python = "3.12.*"
 django = "5.0.7.*"
 taskipy = "^1.13.0"
 ignr = "^2.2"
+djangorestframework = "^3.15.2"
 
 
 [tool.taskipy.tasks]
 run = "python manage.py runserver"
 manage = "python manage.py"
+
 
 
 

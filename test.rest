@@ -1,0 +1,22 @@
+POST http://127.0.0.1:8000/signup
+Content-Type: application/json
+
+{"username" : "arthurito", "password" : "Pass321321", "email" : "arthur@example.com"}
+
+
+
+###
+
+
+POST http://127.0.0.1:8000/login
+Content-Type: application/json
+
+{"username" : "arthurito", "password" : "Pass321321"}
+
+
+
+###
+
+GET http://127.0.0.1:8000/test_token
+Content-Type: application/json
+Authorization: Token b5cb0408e147b156babd69be6ecee5419654de8c
