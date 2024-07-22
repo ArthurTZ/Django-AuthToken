@@ -16,6 +16,7 @@ class APITests(TestCase):
         self.token = Token.objects.create(user=self.user)
 
     def test_login(self):
+        
         url = '/login/'
         response = self.client.post(url, {
             'username': 'testuser',

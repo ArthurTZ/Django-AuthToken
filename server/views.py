@@ -27,6 +27,7 @@ def signup(request):
     if serializer.is_valid():
         serializer.save()
         user = User.objects.get(username=request.data['username'])
+
         user.set_password(request.data['password'])
         user.save()
         token = Token.objects.create(user=user)
@@ -39,4 +40,4 @@ def signup(request):
 @authentication_classes([SessionAuthentication, TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def test_token(request):
-    return Response(f"passed for {request.user.email}")
+    return Response(f"passed for the email : {request.user.email}")
