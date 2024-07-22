@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "django-auth"
+version = "0.1.0"
+description = ""
+authors = ["Pedro Arthur <pedroarthurzpyz@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+django = "5.0.7.*"
+taskipy = "^1.13.0"
+ignr = "^2.2"
+
+
+[tool.taskipy.tasks]
+run = "python manage.py runserver"
+manage = "python manage.py"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
